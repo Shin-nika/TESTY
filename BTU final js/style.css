@@ -1,0 +1,338 @@
+@import url('https://googleapis.com');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid black */
+  background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+header {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header input {
+  width: 200px;
+  height: 30px;
+  border-radius: 1000px;
+  border: 1px solid gray;
+  &::placeholder{
+    text-align: center;
+  }
+  
+}
+header img{
+  cursor: pointer;
+}
+footer{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  height: 200px;
+  background: yellow;
+  cursor: default;
+  position: relative;
+
+  & h1{
+    margin-bottom: 20px;
+  }
+}
+.deactivate {
+  display: none !important;
+}
+.btn{
+  background: yellow;
+  width: 150px;
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 1000px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover{
+    background-color: gold;
+  }
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 25%;
+  font-size: 20px;
+}
+.navbar > * {
+  color: black;
+  text-decoration: none;
+  transition: 0.3s;
+  &:hover {
+    color: gray;
+  }
+}
+.hero{
+  width: 100%;
+  height: 365px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/Hero\ image.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.recipes_header{
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  text-align: center;
+  margin: 60px 0;
+  font-size: 42px;
+}
+.hero h1{
+  color: white;
+  width: 60%;
+  text-align: center;
+  font-size: 42px;
+}
+.recipes{
+  width: 100%;
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0 40px;
+  user-select: none;
+}
+.recipes h3{
+  font-weight: 400;
+  margin: 20px 0;
+}
+
+.social_icons{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.social_icons > *{
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  &:hover{
+    color: gold;
+  }
+}
+
+.about_us_hero{
+  width: 70%;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 24px;
+  font-weight: 400;
+  margin: 40px 0;
+}
+
+.recent_header{
+  text-align: center;
+  margin: 60px 0;
+  font-size: 42px;
+}
+.recent_hero{
+  position: relative;
+  width: 100%;
+
+}
+.recipes_hero{
+    position: relative;
+    margin-bottom: 100px;
+}
+.recent_recipes{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  height: 250px;
+  position: relative;
+  transform: translate(-50%);
+  left: 50%;
+  & h3{
+    font-size: 32px;
+  }
+  & div{
+    width: 65%;
+     & > *{
+    margin: 20px 0;
+  }
+  }
+  & img{
+    width: 250px;
+  }
+}
+
+
+.page_pancake_main, .page_chocolate_main, .page_waffle_main{
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 32px;
+
+}
+.text_pancake, .text_chocolate , .text_waffle{
+  position: relative;
+  left: 30%;
+  transform: translate(-50%);
+  width: 50%;
+  margin: 50px 0;
+  & h2{
+    margin: 20px 0;
+    font-size: 24px;
+  }
+  & p, & ul{
+    font-size: 18px;
+  }
+
+}
+
+.page_pancake_main{
+   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/Page_pancake.png);
+}
+.page_chocolate_main{
+ background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/Page_chocolate.png);
+}
+.page_waffle_main{
+ background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/Page_waffle.png);
+}
+
+
+.small_navbar{
+  font-size: 32px;
+  border-radius: 1000px;
+  border: 1px solid rgb(109, 109, 76);
+  width: 2.5rem;
+  height: auto;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+  & span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7) inset;
+    background: yellow;
+  }
+}
+.aside_navbar{
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background: white;
+  border: 1px solid black;
+  top: 0;
+  left: calc(100% - 250px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  justify-content: left;
+  align-items: start;
+  & > *{
+    margin: 0 20px;
+  }
+ & nav{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 200px;
+ }
+ & span{
+  font-size: 32px;
+  margin: 20px;
+  border: 1px solid black;
+  width: 2.5rem;
+  text-align: center;
+  border-radius: 1000px;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7) inset;
+    background: yellow;
+  }
+  }
+}
+.aside_navbar nav a{
+  border-bottom: 2px solid rgb(207, 218, 63);
+  color: black;
+  text-decoration: none;
+  width: 50%;
+  font-size: 20px;
+  text-align: center;
+}
+.side_input {
+  width: 200px;
+  padding: 0.75rem 1rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 1rem;
+  color: black;
+  background-color: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.modern-input::placeholder {
+  color: #9CA3AF;
+  opacity: 1;
+}
+.modern-input:hover {
+  border-color: #9CA3AF;
+}
+
+.modern-input:focus {
+  border-color: #4F46E5;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.2); 
+}
+.modern-input:disabled {
+  background-color: #F3F4F6;
+  color: #9CA3AF;
+  cursor: not-allowed;
+  border-color: #D1D5DB;
+}
+.modern-input.error {
+  border-color: #D1D5DB;
+}
+
+.modern-input.error:focus {
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.2);
+}
+
+
+
+
+
